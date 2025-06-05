@@ -59,11 +59,13 @@ export function DrawerSidebar({ open, toggleSidebar, DrawerRef }) {
               color="blue-gray"
               className="flex justify-evenly gap-10 font-medium"
             >
+              <Link to="/" className="flex items-center">
               <img
                 src="/logos/logo.png"
                 alt="Logo"
                 className="w-32 rounded-full"
               />
+              </Link>
               <button
                 onClick={toggleSidebar}
                 className="text-primary focus:outline-none bg-primary/10 p-2 rounded-md hover:bg-primary/20"
@@ -86,8 +88,11 @@ export function DrawerSidebar({ open, toggleSidebar, DrawerRef }) {
           </div>
           {showProfile && (
             <div className="flex flex-col items-center text-center border-b-2 border-gray-200 pb-3">
-              <div className="w-16 h-16 rounded-full bg-gradient-to-r from-purple-400 to-indigo-500 flex items-center justify-center mb-3 shadow-lg">
-                <User className="w-8 h-8 text-white" />
+              <div className="w-16 h-16 rounded-full  flex items-center justify-center mb-3 shadow-lg">
+                <img src="https://www.bootstrapget.com/demos/dental-care-admin-template/assets/images/patient1.png"
+                  alt="Profile"
+                  className="w-full h-full rounded-full object-cover"
+                />
               </div>
               <h3 className=" text-primary mb-1">Britney Hardin</h3>
               <p className="text-sm text-gray-600">Department Admin</p>
