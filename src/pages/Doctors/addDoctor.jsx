@@ -671,10 +671,7 @@ const DoctorCreationForm = () => {
           >
             Cancel
           </button>
-          <button
-            type="submit"
-            className="btn-secondary text-nowrap"
-          >
+          <button type="submit" className="btn-secondary text-nowrap">
             Create Doctor Profile
           </button>
         </div>

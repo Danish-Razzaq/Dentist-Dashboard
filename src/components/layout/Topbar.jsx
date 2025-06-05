@@ -126,7 +126,7 @@ const Topbar = ({ toggleSidebar, open }) => {
       </header>
       <div className=" bg-white shadow-md w-full text-primary transition-all duration-300 z-10 flex sm:items-center gap-2 justify-between px-6 py-3 
       max-sm:flex-col
-      overflow-hidden
+
       ">
         <div className="flex text-xl items-center gap-2 text-nowrap">
           <HomeIcon className="h-6 w-6 font-bold" /> / {pageName}
