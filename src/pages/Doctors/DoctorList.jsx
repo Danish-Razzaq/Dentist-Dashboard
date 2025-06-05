@@ -100,35 +100,32 @@ const DoctorList = () => {
     },
   ];
 
-return (
-  <div className="p-6 bg-white rounded-lg shadow-sm border border-primary/20 w-full  overflow-hidden">
-    <div className="flex justify-between items-center flex-wrap gap-4">
-      <h2 className="text-lg font-semibold text-gray-900">Doctor List</h2>
-      <Link to={'/adddoctor'} className="btn-secondary ">
-        Add  Doctor
-      </Link>
-    </div>
+  return (
+    <div className="p-6 bg-white rounded-lg shadow-sm border border-primary/20 w-full  overflow-hidden">
+      <div className="flex justify-between items-center flex-wrap gap-4">
+        <h2 className="text-lg font-semibold text-gray-900">Doctor List</h2>
+        <Link to={"/adddoctor"} className="btn-secondary ">
+          Add Doctor
+        </Link>
+      </div>
 
-    <span className="flex justify-end items-center gap-2 my-4 flex-wrap">
-      <h4>Search:</h4>
-      <input
-        type="text"
-        placeholder="Search Doctors..."
-        className="border border-gray-300 rounded-md px-4 py-2 w-full sm:w-auto"
-      />
-    </span>
+      <span className="flex justify-end items-center gap-2 my-4 flex-wrap">
+        <h4>Search:</h4>
+        <input
+          type="text"
+          placeholder="Search Doctors..."
+          className="border border-gray-300 rounded-md px-4 py-2 w-full sm:w-auto"
+        />
+      </span>
 
-    {/* Table container scrolls horizontally if needed */}
-    <div className="w-full overflow-x-auto">
-      <div className=" ">
-        <Table columns={columns} data={data} />
+      {/* Table container scrolls horizontally if needed */}
+      <div className="w-full overflow-x-auto">
+        <div className=" ">
+          <Table columns={columns} data={data} />
+        </div>
       </div>
     </div>
-  </div>
-);
-
-
-
+  );
 };
 
 export default DoctorList;

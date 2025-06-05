@@ -44,7 +44,7 @@ const OverViewCards = () => {
           {/* Header */}
           <div className="flex items-center gap-5">
             <div className="border-2 border-primary rounded-full p-2">
-              <div className="bg-primary/20 rounded-full p-4 text-primary">
+              <div className="bg-secondary/20 rounded-full p-4 text-primary">
                 {item.icon}
               </div>
             </div>
