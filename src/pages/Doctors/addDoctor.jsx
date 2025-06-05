@@ -638,7 +638,7 @@ const DoctorCreationForm = () => {
       <form onSubmit={handleSubmit(onSubmit)}>
         {/* Tabs */}
         <div className="border-b border-gray-200 mb-8">
-          <nav className="flex space-x-8">
+          <nav className="flex space-x-8 flex-wrap">
             {tabs.map((tab) => {
               const Icon = tab.icon;
               return (
@@ -646,7 +646,7 @@ const DoctorCreationForm = () => {
                   key={tab.id}
                   type="button"
                   onClick={() => setActiveTab(tab.id)}
-                  className={`flex items-center space-x-2 py-4 px-1 border-b-2 font-medium text-sm ${
+                  className={`flex  items-center space-x-2 py-4 px-1 border-b-2 font-medium text-sm ${
                     activeTab === tab.id
                       ? "border-primary/30 text-primary"
                       : "border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300"
@@ -664,7 +664,7 @@ const DoctorCreationForm = () => {
         <div className="mb-8">{renderTabContent()}</div>
 
         {/* Action Buttons */}
-        <div className="flex justify-end space-x-4 pt-6 border-t border-gray-200">
+        <div className="flex max-sm:flex-col-reverse gap-2 justify-end space-x-4 pt-6 border-t border-gray-200">
           <button
             type="button"
             className="px-6 py-2 border border-gray-300 rounded-lg text-gray-700 hover:bg-gray-50 font-medium"
@@ -673,7 +673,7 @@ const DoctorCreationForm = () => {
           </button>
           <button
             type="submit"
-            className="btn-secondary"
+            className="btn-secondary text-nowrap"
           >
             Create Doctor Profile
           </button>

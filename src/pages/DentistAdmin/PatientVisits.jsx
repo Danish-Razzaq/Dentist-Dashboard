@@ -61,7 +61,7 @@ const PatientVisits = () => {
 
   return (
     <div className="bg-gray-100 mt-6 w-full">
-      <div className="inline-block min-w-full w-[400px] overflow-x-auto">
+      <div className="inline-block min-w-full sm:w-[400px] w-full overflow-x-auto">
         <GenericTable
           columns={columns}
           data={sampleData}
@@ -69,6 +69,7 @@ const PatientVisits = () => {
           currentPage={1}
           totalPages={1}
           onAction={handleAction}
+          
         />
       </div>
     </div>

@@ -91,7 +91,7 @@ const handleAppointmentStatusChange = (index, value) => {
       <div className="p-6 border-b">
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
           <div className="flex items-center flex-wrap  gap-4 justify-between w-full">
-            <div className="flex items-center gap-2 ">
+            <div className="flex items-center gap-2 flex-wrap">
               <span className="bg-blue-100/90 text-blue-800 p-2 rounded-lg text-sm font-medium">
                 Upcoming{" "}
                 <span className="bg-blue-800 py-1 px-2 rounded-md text-white">
@@ -122,7 +122,7 @@ const handleAppointmentStatusChange = (index, value) => {
       <div className="p-6 border-b">
         <div className="flex flex-col sm:flex-row sm:items-center flex-wrap  sm:justify-between gap-4">
           <h2 className="text-xl font-semibold text-gray-900">Appointments</h2>
-          <div className="flex items-center gap-3">
+          <div className="flex flex-wrap items-center gap-3">
             <div className="relative">
               <Search className="w-4 h-4 absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
               <input
