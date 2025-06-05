@@ -10,8 +10,8 @@ module.exports = withMT({
   theme: {
     extend: {
       colors: {
-        primary: "#7367f0", // Tailwind's blue-500 
-        secondary: "#9333ea", // Tailwind's purple-500
+        primary: "#46006e", // Tailwind's blue-500 
+        secondary: "#019e98", // Tailwind's purple-500
         accent: "#fbbf24", // Tailwind's yellow-400
         neutral: "#374151", // Tailwind's gray-800
         "base-100": "#ffffff", // Tailwind's white

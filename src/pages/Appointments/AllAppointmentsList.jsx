@@ -81,7 +81,7 @@ const AllAppointmentsList = () => {
     <div className="bg-white p-6 rounded-lg shadow-sm border border-primary/20">
       <div className="flex items-center justify-between mb-4">
         <h2 className="text-lg font-semibold">Appointments</h2>
-        <Link to={'/add-appointment'} className="px-4 py-2 bg-primary text-white rounded hover:bg-primary/80">
+        <Link to={'/add-appointment'} className="btn-secondary">
           Add Appointment
         </Link>
       </div>

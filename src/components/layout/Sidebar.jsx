@@ -60,7 +60,7 @@ export function DrawerSidebar({ open, toggleSidebar, DrawerRef }) {
               className="flex justify-evenly gap-10 font-medium"
             >
               <img
-                src="/logos/logo.svg"
+                src="/logos/logo.png"
                 alt="Logo"
                 className="w-32 rounded-full"
               />
@@ -176,7 +176,7 @@ export function DrawerSidebar({ open, toggleSidebar, DrawerRef }) {
                     onClick={handleCLoseDrawerMobile}
                     className={`py-2 ${
                       location.pathname === item.path
-                        ? "bg-primary/10 text-primary"
+                        ? "bg-primary/10 text-secondary"
                         : "hover:bg-primary/10 hover:text-primary"
                     }`}
                   >
@@ -184,7 +184,7 @@ export function DrawerSidebar({ open, toggleSidebar, DrawerRef }) {
                       <div
                         className={`${
                           location.pathname === item.path
-                            ? "bg-primary text-white"
+                            ? "bg-secondary text-white"
                             : "bg-white"
                         } p-2 rounded-full shadow-lg `}
                       >

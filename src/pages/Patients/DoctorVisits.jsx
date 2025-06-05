@@ -68,7 +68,7 @@ const DoctorVisits = ({ doctorLists, title }) => {
                 <td className="p-4 whitespace-nowrap">$200</td>
                 <td className="p-4 whitespace-nowrap flex gap-1">
                   <button
-                    className="bg-primary p-2 text-white rounded hover:bg-primary/80 transition"
+                    className="btn-secondary"
                     onClick={handleViewReports}
                   >
                     View Reports

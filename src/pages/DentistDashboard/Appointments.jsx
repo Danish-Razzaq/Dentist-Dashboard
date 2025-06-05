@@ -74,8 +74,8 @@ const Appointments = () => {
             onClick={() => setSelectedDay(day)}
             className={`px-4 py-2 rounded-b-lg text-sm font-medium transition-colors ${
               selectedDay === day
-                ? 'bg-primary text-white'
-                : 'bg-primary/15 text-gray-600 hover:bg-primary/30'
+                ? 'bg-secondary text-white'
+                : 'bg-secondary/15 text-gray-600 hover:bg-secondary/30'
             }`}
           >
             {day}

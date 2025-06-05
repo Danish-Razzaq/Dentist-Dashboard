@@ -73,10 +73,10 @@ const AppointmentsCard = () => {
                 Need an appointment urgent.
               </p>
               <div className="flex space-x-2 pt-2">
-                <button className="bg-primary text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-primary/90">
+                <button className="btn-secondary">
                   Approve
                 </button>
-                <button className="bg-gray-100 text-gray-700 px-4 py-2 rounded-lg text-sm font-medium hover:bg-gray-200">
+                <button className="btn-white">
                   Decline
                 </button>
               </div>

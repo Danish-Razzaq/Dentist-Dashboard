@@ -1,7 +1,6 @@
 import { Search, List, Grid } from "lucide-react";
-import {Link} from "react-router-dom"
+import { Link } from "react-router-dom";
 import { patientsMokeData } from "../../utils/mokeData";
-
 
 export default function PatientList() {
   return (
@@ -12,7 +11,6 @@ export default function PatientList() {
         <div className="flex items-center gap-2">
           <input
             type="text"
-        
             placeholder="Search"
             className="px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-primary text-sm w-full sm:w-60"
           />
@@ -39,46 +37,55 @@ export default function PatientList() {
           </span>
         </button>
       </div>
-      <Link to={'/addPatients'}  className="ml-auto flex  w-fit bg-primary p-1 px-2 rounded text-white  mb-3">
+      <Link
+        to={"/addPatients"}
+        className="btn-secondary  mb-4 "
+        style={{
+          display: "flex",
+          width: "fit-content",
+          marginLeft: "auto",
+        }}
+      >
         Add Patient
       </Link>
 
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {patientsMokeData.map((p) => (
-            <Link to={`/patient/${p.id}`}>
-          <div
-            key={p.id}
-            className="bg-white rounded-xl border border-gray-200 p-4 shadow-sm flex flex-col gap-2"
-          >
-            <div className="flex items-start gap-4">
-              <div>
-                <img
-                  src={p.avatar}
-                  alt={p.name}
-                  className="w-16 h-16 rounded-md object-cover"
-                />
+          <Link to={`/patient/${p.id}`}>
+            <div
+              key={p.id}
+              className="bg-white rounded-xl border border-gray-200 p-4 shadow-sm flex flex-col gap-2"
+            >
+              <div className="flex items-start gap-4">
+                <div>
+                  <img
+                    src={p.avatar}
+                    alt={p.name}
+                    className="w-16 h-16 rounded-md object-cover"
+                  />
+                </div>
+                <div className="text-sm">
+                  <p className="text-primary text-sm ">#{p.id}</p>
+                  <p className=" text-gray-800 py-1">{p.name}</p>
+                  <p className="text-gray-600">
+                    Age: {p.age} | {p.gender} | {p.blood}
+                  </p>
+                </div>
               </div>
-              <div className="text-sm">
-                <p className="text-primary text-sm ">#{p.id}</p>
-                <p className=" text-gray-800 py-1">{p.name}</p>
-                <p className="text-gray-600">
-                  Age: {p.age} | {p.gender} | {p.blood}
+              <hr className="border-gray-200 mt-2" />
+              <div className="flex flex-col gap-1">
+                <p className="text-primary font-semibold text-md mt-2">
+                  Diagnosis
+                </p>
+                <p className="text-md text-gray-600 line-clamp-2">
+                  {p.diagnosis}
+                </p>
+                <p className="text-md text-primary font-medium mt-1">
+                  Last Visit:{" "}
+                  <span className="text-gray-700">{p.lastVisit}</span>
                 </p>
               </div>
             </div>
-            <hr className="border-gray-200 mt-2" />
-            <div className="flex flex-col gap-1">
-              <p className="text-primary font-semibold text-md mt-2">
-                Diagnosis
-              </p>
-              <p className="text-md text-gray-600 line-clamp-2">
-                {p.diagnosis}
-              </p>
-              <p className="text-md text-primary font-medium mt-1">
-                Last Visit: <span className="text-gray-700">{p.lastVisit}</span>
-              </p>
-            </div>
-          </div>
           </Link>
         ))}
       </div>

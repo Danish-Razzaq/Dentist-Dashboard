@@ -42,7 +42,7 @@ const Topbar = ({ toggleSidebar, open }) => {
             {!open && (
               <>
                 <img
-                  src="/logos/logo.svg"
+                  src="/logos/logomain.png"
                   alt="Logo"
                   className="w-28 rounded-full"
                 />

@@ -104,7 +104,7 @@ return (
   <div className="p-6 bg-white rounded-lg shadow-sm border border-primary/20 w-full  overflow-hidden">
     <div className="flex justify-between items-center flex-wrap gap-4">
       <h2 className="text-lg font-semibold text-gray-900">Doctor List</h2>
-      <Link to={'/adddoctor'} className="bg-primary text-white p-1.5 px-2 rounded">
+      <Link to={'/adddoctor'} className="btn-secondary ">
         Add  Doctor
       </Link>
     </div>

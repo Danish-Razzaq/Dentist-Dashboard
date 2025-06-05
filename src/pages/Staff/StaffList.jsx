@@ -52,7 +52,7 @@ const StaffList = () => {
     <div className='bg-white p-4 rounded shadow-md border border-primary/20'>
         <div className="flex items-center justify-between mb-4">
         <h1 className="text-2xl font-bold mb-4">Staff List</h1>
-        <Link to={'/addstaff'} className="btn">Add Staff</Link>
+        <Link to={'/addstaff'} className="btn-secondary">Add Staff</Link>
         </div>
         <Table columns={columns} data={data}  pagination={false}  />
     </div>

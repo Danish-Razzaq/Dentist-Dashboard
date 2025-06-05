@@ -111,7 +111,7 @@ const handleAppointmentStatusChange = (index, value) => {
                 </span>
               </span>
             </div>
-            <button className="bg-primary text-white px-4 py-2 rounded-[2px] text-sm font-medium hover:bg-primary/50 transition-colors">
+            <button className="btn-secondary">
               My Patient List
             </button>
           </div>

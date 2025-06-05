@@ -33,7 +33,7 @@ const AppointmentCalendar = () => {
       <div className="flex justify-end mb-4">
         <Link
           to="/add-appointment"
-          className="btn"
+          className="btn-secondary"
         >
           Book Appointment
         </Link>
