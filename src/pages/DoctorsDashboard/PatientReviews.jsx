@@ -5,7 +5,8 @@ const PatientReviws = () => {
     {
       id: "P0039",
       name: "Tonia Woodard",
-      avatar: "https://www.bootstrapget.com/demos/dental-care-admin-template/assets/images/patient2.png",
+      avatar:
+        "https://www.bootstrapget.com/demos/dental-care-admin-template/assets/images/patient2.png",
       review:
         "I had a very good experience here. I got a best psychiatrist and a therapist. They analysed my case very deeply and there medicines helped me a lot.",
       star: 5,
@@ -13,7 +14,8 @@ const PatientReviws = () => {
     {
       id: "P0063",
       name: "Roseann Kane",
-      avatar: "https://www.bootstrapget.com/demos/dental-care-admin-template/assets/images/patient1.png",
+      avatar:
+        "https://www.bootstrapget.com/demos/dental-care-admin-template/assets/images/patient1.png",
       review:
         "I had a very good experience here. I got a best psychiatrist and a therapist. They analysed my case very deeply and there medicines helped me a lot.",
       urgent: true,
@@ -22,7 +24,8 @@ const PatientReviws = () => {
     {
       id: "P0012",
       name: "Lillie Mccall",
-      avatar: "https://www.bootstrapget.com/demos/dental-care-admin-template/assets/images/patient2.png",
+      avatar:
+        "https://www.bootstrapget.com/demos/dental-care-admin-template/assets/images/patient2.png",
       review:
         "I had a very good experience here. I got a best psychiatrist and a therapist. They analysed my case very deeply and there medicines helped me a lot.",
       urgent: true,
@@ -31,7 +34,8 @@ const PatientReviws = () => {
     {
       id: "P0045",
       name: "Dale Mccullough",
-      avatar: "https://www.bootstrapget.com/demos/dental-care-admin-template/assets/images/patient1.png",
+      avatar:
+        "https://www.bootstrapget.com/demos/dental-care-admin-template/assets/images/patient1.png",
       review:
         "I had a very good experience here. I got a best psychiatrist and a therapist. They analysed my case very deeply and there medicines helped me a lot.",
       urgent: true,
@@ -40,7 +44,8 @@ const PatientReviws = () => {
     {
       id: "P0028",
       name: "Michele Mcclain",
-      avatar: "https://www.bootstrapget.com/demos/dental-care-admin-template/assets/images/patient5.png",
+      avatar:
+        "https://www.bootstrapget.com/demos/dental-care-admin-template/assets/images/patient5.png",
       review:
         "I had a very good experience here. I got a best psychiatrist and a therapist. They analysed my case very deeply and there medicines helped me a lot.",
       urgent: true,
@@ -50,7 +55,9 @@ const PatientReviws = () => {
 
   return (
     <div className="bg-white rounded-lg shadow-sm border p-6 border-primary/20">
-      <h2 className="text-lg font-semibold text-gray-900 mb-4">Patient Reviews</h2>
+      <h2 className="text-lg font-semibold text-gray-900 mb-4">
+        Patient Reviews
+      </h2>
       <div className="space-y-4 overflow-y-scroll h-96">
         {appointments.map((appointment) => (
           <div
@@ -68,11 +75,18 @@ const PatientReviws = () => {
               </p>
               {/* review stars */}
               <div className="flex ">
-
-              {[1,2,3,4,5].map((star)=>(
-                  <Star className={`text-yellow-900  ${ appointment?.star ?  'fill-yellow-800' : 'fill-gray-200'} `} />
+                {[1, 2, 3, 4, 5].map((star) => (
+                  <Star
+                    key={star}
+                    size={26}
+                    className={` text-white  ${
+                      star <= appointment?.star
+                        ? "fill-yellow-800 "
+                        : "fill-[#cdd6dc] "
+                    }`}
+                  />
                 ))}
-                </div>
+              </div>
             </div>
           </div>
         ))}
