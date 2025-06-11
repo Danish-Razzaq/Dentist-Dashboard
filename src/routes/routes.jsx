@@ -142,7 +142,7 @@ const RoutesLinks = [
 ,
   {
     title: "Login",
-    path: 'login',
+    path: '/login',
     component: Login,
     exact: true,
     enableStyle: false,
