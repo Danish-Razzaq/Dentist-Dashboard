@@ -1,5 +1,6 @@
 import React from "react";
 import Invoice from "../pages/Invoice";
+import Settings from "../pages/settings";
 // import AddStaff from "../pages/Staff/AddStaff";
 const AddStaff = React.lazy(() => import("../pages/Staff/AddStaff"));
 const Staff = React.lazy(() => import("../pages/Staff"));
@@ -138,8 +139,14 @@ const RoutesLinks = [
   component: AddStaff,
   exact: true,
   enableStyle: true,
-}
-,
+},
+{
+  title:"Settings",
+  path: '/settings',
+  component: Settings,
+  exact: true,
+  enableStyle: true,
+},
   {
     title: "Login",
     path: '/login',

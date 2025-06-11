@@ -3,7 +3,7 @@ import {
   CalendarCheck2,
   Users,
   UserCircle2,
-  ShieldUser, 
+  ShieldUser,
   CalendarCheck2Icon,
   LayoutPanelLeft,
   Receipt,
@@ -49,7 +49,6 @@ const navConfig = [
     ],
   },
 
-
   {
     title: "Patients",
     icon: UserCircle2,
@@ -67,7 +66,7 @@ const navConfig = [
     //       icon: UserCircle2,
     //     }
     //   ]
-    },
+  },
 
   {
     title: "Doctors",
@@ -78,13 +77,31 @@ const navConfig = [
     title: "Invoices",
     path: "/invoice",
     icon: Receipt,
-  }
-  ,
+  },
   {
     title: "Staff",
     path: "/staff",
-    icon: Users ,
-  }
+    icon: Users,
+  },
+  {
+    title: "Settings",
+    icon: UserCircle2,
+    group: "settings",
+    children: [
+      {
+        title: "Sign In",
+        path: "/login",
+      },
+      // {
+      //   title: "Register",
+      //   path: "/register",
+      // },
+      {
+        title: "Settings",
+        path: "/settings",
+      },
+    ],
+  },
 ];
 
 export default navConfig;
