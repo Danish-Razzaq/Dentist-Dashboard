@@ -1,7 +1,7 @@
-import { Search } from "lucide-react";
+import { Search, User } from "lucide-react";
 import React, { useState, useRef, useEffect } from "react";
 import { HomeIcon } from "lucide-react";
-import navConfig from "../myNav/config";
+import { LogOut } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import DatePicker from "../DateRangePicker";
 import RoutesLinks from "../../routes/routes";
@@ -41,12 +41,12 @@ const Topbar = ({ toggleSidebar, open }) => {
           <div className="flex items-center gap-4">
             {!open && (
               <>
-                 <Link to="/" className="flex items-center">
-                <img
-                  src="/logos/logomain.png"
-                  alt="Logo"
-                  className="w-40 rounded-full"
-                />
+                <Link to="/" className="flex items-center">
+                  <img
+                    src="/logos/logomain.png"
+                    alt="Logo"
+                    className="w-40 rounded-full"
+                  />
                 </Link>
                 <button
                   onClick={toggleSidebar}
@@ -101,21 +101,30 @@ const Topbar = ({ toggleSidebar, open }) => {
             </button>
 
             {dropdownOpen && (
-              <div className="absolute right-0 mt-2 w-64 bg-white text-sm text-gray-800 rounded-lg shadow-xl z-50 animate-fade-in-down">
-                <div className="px-4 py-3 border-b border-gray-200">
-                  <p className="font-semibold text-base">{user.name}</p>
-                  <p className="text-gray-500">{user.email}</p>
+              <div className="absolute right-0 mt-2 w-72 bg-white rounded-xl shadow-lg ring-1 ring-gray-200 z-50 animate-fade-in-down">
+                {/* User Info */}
+                <div className="px-5 py-4 border-b border-gray-100">
+                  <p className="text-base font-semibold text-gray-800">
+                    <User className="inline-block  bg-secondary/10 p-1 w-8 h-8 rounded-full mr-2" />
+                    {user.name}
+                  </p>
+                  <p className="text-sm text-gray-500 truncate pl-10">
+                    {user.email}
+                  </p>
                 </div>
-                <ul className="py-1">
+
+                {/* Actions */}
+                <ul className="py-2">
                   <li>
                     <button
                       onClick={() => {
-                        // handle logout logic
-                        alert("Logged out");
+                        // alert("Logged out");
+                        window.location.href = "/login";
                       }}
-                      className="w-full text-left px-4 py-2 hover:bg-gray-100 transition-colors"
+                      className="flex items-center w-fit  ml-1  px-5 py-2 text-red-600 hover:bg-red-50 hover:text-red-700 transition-colors duration-200"
                     >
-                      Logout
+                      <LogOut className="w-4 h-4 mr-2" />
+                      <span className="text-sm font-medium">Logout</span>
                     </button>
                   </li>
                 </ul>
@@ -124,10 +133,10 @@ const Topbar = ({ toggleSidebar, open }) => {
           </div>
         </div>
       </header>
-      <div className=" bg-white shadow-md w-full text-primary transition-all duration-300 z-10 flex sm:items-center gap-2 justify-between px-6 py-3 
-      max-sm:flex-col
-
-      ">
+      <div
+        className=" bg-white shadow-md w-full text-primary transition-all duration-300 z-10 flex sm:items-center gap-2 justify-between px-6 py-3 
+      max-sm:flex-col"
+      >
         <div className="flex text-xl items-center gap-2 text-nowrap">
           <HomeIcon className="h-6 w-6 font-bold" /> / {pageName}
         </div>

@@ -1,3 +1,4 @@
+import React from "react";
 import { BotMessageSquare } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 const ChatWidget = () => {
