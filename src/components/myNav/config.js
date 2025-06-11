@@ -7,6 +7,7 @@ import {
   CalendarCheck2Icon,
   LayoutPanelLeft,
   Receipt,
+  UserCog,
 } from "lucide-react";
 
 const navConfig = [
@@ -85,7 +86,7 @@ const navConfig = [
   },
   {
     title: "Settings",
-    icon: UserCircle2,
+    icon: UserCog,
     group: "settings",
     children: [
       {
