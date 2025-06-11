@@ -6,6 +6,7 @@ import {
   ShieldUser, 
   CalendarCheck2Icon,
   LayoutPanelLeft,
+  Receipt,
 } from "lucide-react";
 
 const navConfig = [
@@ -73,6 +74,12 @@ const navConfig = [
     path: "/doctors",
     icon: ShieldUser,
   },
+  {
+    title: "Invoices",
+    path: "/invoice",
+    icon: Receipt,
+  }
+  ,
   {
     title: "Staff",
     path: "/staff",

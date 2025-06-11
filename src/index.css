@@ -29,3 +29,25 @@
 .animate-fade-in-down {
   animation: fade-in-down 0.2s ease-out;
 }
+
+
+
+
+@media print {
+    @page {
+        size: A4;
+        margin: 0;
+    }
+    body {
+        margin: 15px 0px ; /* Removes body margin */
+    }
+    /* Optional: to hide any elements that are not needed */
+    header,
+    footer {
+        display: none; /* Hide these elements when printing */
+    }
+    * {
+        -webkit-print-color-adjust: exact; /* Chrome, Safari */
+        print-color-adjust: exact; /* Firefox */
+    }
+}
