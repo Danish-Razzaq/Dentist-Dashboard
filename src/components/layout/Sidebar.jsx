@@ -57,18 +57,18 @@ export function DrawerSidebar({ open, toggleSidebar, DrawerRef }) {
             <Typography
               variant="h5"
               color="blue-gray"
-              className="flex justify-evenly gap-10 font-medium"
+              className="flex justify-evenly items-center gap-24 font-medium"
             >
               <Link to="/" className="flex items-center">
               <img
                 src="/logos/logo.png"
                 alt="Logo"
-                className="w-32 rounded-full"
+                className="w-20 "
               />
               </Link>
               <button
                 onClick={toggleSidebar}
-                className="text-primary focus:outline-none bg-primary/10 p-2 rounded-md hover:bg-primary/20"
+                className="text-primary focus:outline-none bg-primary/10 p-2 rounded-md hover:bg-primary/20 h-fit"
               >
                 <svg
                   className="h-6 w-6"

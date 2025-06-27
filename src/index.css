@@ -40,6 +40,7 @@
     }
     body {
         margin: 15px 0px ; /* Removes body margin */
+          padding: 16px;
     }
     /* Optional: to hide any elements that are not needed */
     header,

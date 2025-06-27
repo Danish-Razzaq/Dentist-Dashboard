@@ -45,7 +45,7 @@ const Topbar = ({ toggleSidebar, open }) => {
                   <img
                     src="/logos/logomain.png"
                     alt="Logo"
-                    className="w-40 rounded-full"
+                    className="w-24 "
                   />
                 </Link>
                 <button

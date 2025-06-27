@@ -106,9 +106,9 @@ const InvoiceView = ({ invoice, onBack }) => {
           <div className="flex items-center justify-between mb-8">
             <div className="flex items-center gap-3">
               <img
-                src="https://www.bootstrapget.com/demos/dental-care-admin-template/assets/images/logo.svg"
+                src="/logos/logo.png"
                 alt="Logo"
-                className="w-96 object-contain"
+                className="w-32 object-contain"
               />
             </div>
             <div className="text-right">
